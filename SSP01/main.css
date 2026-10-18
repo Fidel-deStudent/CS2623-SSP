@@ -1,0 +1,124 @@
+/* ============================================================
+   CS2623 SSP01 - main.css
+   Author: Fraire, Fidel
+   ============================================================
+   COLORS
+   Background:  #F5F5F5 (light gray)
+   Header:      #1B2A6B (navy)
+   Header text: #FFFFFF (white)
+   Text:        #222222 (near-black)
+   Nav buttons: #006B7D (teal)
+   Nav text:    #FFFFFF (white)
+   Footer:      #E0E0E0 (light gray)
+   Left nav:    #E0E0E0 (light gray, used on SSP02)
+   Links:       #0000EE (standard blue)
+   Visited:     #551A8B (purple)
+   Active:      #CC0000 (red)
+   ============================================================
+   TYPOGRAPHY
+   Body:    1em Calibri, Tahoma, Verdana, Arial
+   Headers: 2.2em "Times New Roman", Georgia, serif
+   Nav:     0.85em Tahoma, Verdana, Arial
+   ============================================================ */
+
+/* ---------- Page basics ---------- */
+body {
+    background-color: #F5F5F5;
+    color: #222222;
+    font-family: Calibri, Tahoma, Verdana, Arial, sans-serif;
+    font-size: 1em;
+    margin: 0;
+}
+
+/* ---------- Header ---------- */
+header {
+    background-color: #1B2A6B;
+    color: #FFFFFF;
+    padding: 1em;
+    text-align: center;
+}
+
+h1 {
+    font-family: "Times New Roman", Georgia, serif;
+    font-size: 2.2em;
+    margin: 0;
+}
+
+/* ---------- Top navigation buttons ---------- */
+#top-nav {
+    font-family: Tahoma, Verdana, Arial, sans-serif;
+    font-size: 0.85em;
+    padding: 0.5em;
+    text-align: center;
+}
+
+#top-nav a {
+    background-color: #006B7D;
+    border-radius: 4px;
+    display: inline-block;
+    margin: 0.2em;
+    padding: 0.5em 0.9em;
+    text-decoration: none;
+}
+
+/* Nav button text stays white in every link state */
+#top-nav a:link,
+#top-nav a:visited,
+#top-nav a:active {
+    color: #FFFFFF;
+}
+
+/* ---------- Links (order matters: link, visited, hover, active) ---------- */
+a:link {
+    color: #0000EE;
+}
+
+a:visited {
+    color: #551A8B;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+a:active {
+    color: #CC0000;
+}
+
+/* ---------- Main content ---------- */
+main {
+    padding: 1em 2em;
+}
+
+/* ---------- Footer ---------- */
+footer {
+    background-color: #E0E0E0;
+    color: #222222;
+    padding: 1em;
+    text-align: center;
+}
+
+/* ---------- Layout used by SSP02 (left nav + content) ---------- */
+#page-wrapper {
+    display: flex;
+}
+
+#left-nav {
+    background-color: #E0E0E0;
+    padding: 1em;
+    width: 12em;
+}
+
+#left-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#left-nav li {
+    margin-bottom: 0.5em;
+}
+
+#page-wrapper main {
+    flex: 1;
+}
