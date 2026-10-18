@@ -1,7 +1,7 @@
 <?php
 /*
- * SSP02.php — CS2623 Week 1
- * Dynamic PHP page with include files.
+ * SSP02.php - CS2623 Week 1
+ * Dynamic PHP page built from include files.
  */
 ?>
 <!DOCTYPE html>
@@ -10,11 +10,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CS2623 SSP02: Fraire</title>
+
+    <!-- Shared site styles from SSP01, then the table styles -->
     <link rel="stylesheet" href="../SSP01/main.css">
     <link rel="stylesheet" href="CSS/table.css">
 </head>
 <body>
-
     <?php require_once __DIR__ . "/PHP/include_header.php"; ?>
 
     <div id="page-wrapper">
@@ -27,6 +28,5 @@
     </div>
 
     <?php require_once __DIR__ . "/PHP/include_footer.php"; ?>
-
 </body>
 </html>

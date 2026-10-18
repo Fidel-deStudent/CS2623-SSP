@@ -1,26 +1,26 @@
-/* =============================================================
-   CS2623 SSP02 — table.css
+/* ============================================================
+   CS2623 SSP02 - table.css
    Author: Fraire, Fidel
    COLORS
-   Table header: #1B2A6B  (navy)
-   Header text:  #FFFFFF  (white)
-   Even rows:    #E8EEF4  (light blue)
-   Odd rows:     #FFFFFF  (white)
-   Caption:      #006B7D  (teal)
-   Cell borders: #CCCCCC  (light gray)
-   ============================================================= */
+   Table header: #1B2A6B (navy)
+   Header text:  #FFFFFF (white)
+   Even rows:    #E8EEF4 (light blue)
+   Odd rows:     #FFFFFF (white)
+   Caption:      #006B7D (teal)
+   Cell border:  #CCCCCC (light gray)
+   ============================================================ */
 
 #weekly-planner {
-    width: 80%;
     border-collapse: collapse;
-    margin: 1.5em auto;
     font-family: Calibri, Tahoma, Arial, sans-serif;
+    margin: 1.5em auto;
+    width: 80%;
 }
 
 #weekly-planner caption {
+    color: #006B7D;
     font-size: 1.1em;
     font-weight: bold;
-    color: #006B7D;
     margin-bottom: 0.5em;
 }
 
@@ -33,10 +33,11 @@
 
 #weekly-planner td {
     background-color: #FFFFFF;
-    padding: 0.5em 1em;
     border: 1px solid #CCCCCC;
+    padding: 0.5em 1em;
 }
 
+/* Alternating row color */
 #weekly-planner tr:nth-child(even) td {
     background-color: #E8EEF4;
 }
