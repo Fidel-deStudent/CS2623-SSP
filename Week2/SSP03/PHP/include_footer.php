@@ -3,7 +3,7 @@
    Prints the last-modified date of the requested page and closes the document. */
 
 // Only call filemtime() when the script file really exists
-$script_file = $_SERVER['SCRIPT_FILENAME'] ?? '';
+$script_file = isset($_SERVER['SCRIPT_FILENAME']) ? $_SERVER['SCRIPT_FILENAME'] : '';
 if ($script_file !== '' && is_file($script_file)) {
     $modified = new DateTime('@' . filemtime($script_file));
     $modified->setTimezone(new DateTimeZone('America/Chicago'));

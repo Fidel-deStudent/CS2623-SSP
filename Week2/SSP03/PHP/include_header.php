@@ -2,7 +2,7 @@
 /* include_header.php - CS2623 SSP03
    Opens the HTML document, links the Week 1 site styles, and prints the
    page header and top navigation. Set $page_title before including. */
-$page_title = $page_title ?? 'CS2623 SSP03: Fraire';
+$page_title = isset($page_title) ? $page_title : 'CS2623 SSP03: Fraire';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -17,7 +17,7 @@ $page_title = $page_title ?? 'CS2623 SSP03: Fraire';
 </head>
 <body>
 <header>
-    <h1>CS2623 <?php echo htmlspecialchars($_SERVER['SERVER_NAME'] ?? 'Server-Side Programming', ENT_QUOTES, 'UTF-8'); ?></h1>
+    <h1>CS2623 <?php echo htmlspecialchars(isset($_SERVER['SERVER_NAME']) ? $_SERVER['SERVER_NAME'] : 'Server-Side Programming', ENT_QUOTES, 'UTF-8'); ?></h1>
 </header>
 
 <!-- Top navigation: same 12 buttons as the home page (SSP01) -->
