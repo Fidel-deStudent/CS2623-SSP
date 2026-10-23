@@ -65,3 +65,21 @@ function fn_tableRow(string $day, string $details, string $time): void {
     echo '<td>' . htmlspecialchars($time, ENT_QUOTES, 'UTF-8') . '</td>';
     echo '</tr>';
 }
+
+/**
+ * Return the day name for a day number (1 = Monday ... 7 = Sunday).
+ * Uses an if/elseif chain on purpose (assignment requirement, not match).
+ *
+ * @param int $day_num Day number 1-7.
+ * @return string Day name, or "Unknown" for invalid input.
+ */
+function fn_dayOfWeek(int $day_num): string {
+    if ($day_num === 1)     return 'Monday';
+    elseif ($day_num === 2) return 'Tuesday';
+    elseif ($day_num === 3) return 'Wednesday';
+    elseif ($day_num === 4) return 'Thursday';
+    elseif ($day_num === 5) return 'Friday';
+    elseif ($day_num === 6) return 'Saturday';
+    elseif ($day_num === 7) return 'Sunday';
+    else                    return 'Unknown';
+}
