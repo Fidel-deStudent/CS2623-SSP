@@ -49,3 +49,19 @@ function fn_tableRowCurrent(string $day, string $details, string $time): void {
     echo '<td>' . htmlspecialchars($time, ENT_QUOTES, 'UTF-8') . '</td>';
     echo '</tr>';
 }
+
+/**
+ * Print a normal (not highlighted) row.
+ *
+ * @param string $day     Day name.
+ * @param string $details Activity for the day.
+ * @param string $time    Time of the activity.
+ * @return void
+ */
+function fn_tableRow(string $day, string $details, string $time): void {
+    echo '<tr>';
+    echo '<td>' . htmlspecialchars($day, ENT_QUOTES, 'UTF-8') . '</td>';
+    echo '<td>' . htmlspecialchars($details, ENT_QUOTES, 'UTF-8') . '</td>';
+    echo '<td>' . htmlspecialchars($time, ENT_QUOTES, 'UTF-8') . '</td>';
+    echo '</tr>';
+}
