@@ -24,3 +24,12 @@ function fn_tableOpen(string $caption): void {
     echo '<th>Day</th><th>Details</th><th>Time</th>';
     echo '</tr>';
 }
+
+/**
+ * Close the planner table.
+ *
+ * @return void
+ */
+function fn_tableClose(): void {
+    echo '</table>';
+}
