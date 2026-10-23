@@ -45,3 +45,5 @@ Use require() for files your app cannot run without.
 Use include() for files that are nice to have but not critical.
 
 The textbook says the same thing about these functions.
+
+- I asked Copilot Chat to write PHP that shows the last modified date of the page. It suggested `filemtime($scriptFile)` with `$_SERVER["SCRIPT_FILENAME"]` and `htmlspecialchars()` on the output. I accepted that approach because `filemtime()` returns the modification time of the PHP file actually being  requested, which is more accurate than `getlastmod()` in an include chain, and the escaping follows the course rule. Copilot's `else` branch printed the current date when the file could not be found, which would show a wrong "Last modified" time. I kept its `is_file()` check but changed the fallback to "Unknown".
