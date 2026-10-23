@@ -83,3 +83,23 @@ function fn_dayOfWeek(int $day_num): string {
     elseif ($day_num === 7) return 'Sunday';
     else                    return 'Unknown';
 }
+
+/**
+ * Return the planned activity for a day number.
+ * Uses a switch statement (assignment requirement).
+ *
+ * @param int $day_num Day number 1-7.
+ * @return string Activity description, or "No schedule" for invalid input.
+ */
+function fn_dayDetails(int $day_num): string {
+    switch ($day_num) {
+        case 1:  return 'PHP lecture — Ch08 Conditionals';
+        case 2:  return 'Lab: SSP03 function library';
+        case 3:  return 'Study: string functions Ch09';
+        case 4:  return 'Lab: SSP04 exercises';
+        case 5:  return 'Quiz review + office hours';
+        case 6:  return 'Project work';
+        case 7:  return 'Rest day';
+        default: return 'No schedule';
+    }
+}
