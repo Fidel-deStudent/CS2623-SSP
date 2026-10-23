@@ -33,3 +33,19 @@ function fn_tableOpen(string $caption): void {
 function fn_tableClose(): void {
     echo '</table>';
 }
+
+/**
+ * Print a highlighted (yellow) row for today's entry.
+ *
+ * @param string $day     Day name.
+ * @param string $details Activity for the day.
+ * @param string $time    Time of the activity.
+ * @return void
+ */
+function fn_tableRowCurrent(string $day, string $details, string $time): void {
+    echo '<tr style="background-color:#FFFF66;">';
+    echo '<td>' . htmlspecialchars($day, ENT_QUOTES, 'UTF-8') . '</td>';
+    echo '<td>' . htmlspecialchars($details, ENT_QUOTES, 'UTF-8') . '</td>';
+    echo '<td>' . htmlspecialchars($time, ENT_QUOTES, 'UTF-8') . '</td>';
+    echo '</tr>';
+}
