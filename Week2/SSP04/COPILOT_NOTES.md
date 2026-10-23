@@ -9,5 +9,10 @@
 | 8 | ex2_datetime.php | createFromFormat suggestion | IMPROVED | Added $tz parameter — Copilot omitted it |
 
 ## htmlspecialchars() vs htmlentities()
-- **htmlspecialchars()**: Encodes only special HTML syntax characters (`<`, `>`, `&`, `"`, `'`). Recommended for modern UTF-8 pages and course XSS standards.
-- **htmlentities()**: Encodes all characters with HTML entity equivalents (like `&copy;`). Older approach, unnecessary when using UTF-8.
+htmlspecialchars() and htmlentities() both convert characters that have special meaning in HTML—such as &, <, >, and quotes—into HTML entities. This helps prevent HTML or script injection when displaying untrusted text.
+
+The difference is that htmlentities() also converts many other characters, including accented letters and symbols, while htmlspecialchars() converts only the HTML-special characters.
+
+
+For ordinary HTML output, htmlspecialchars() is usually sufficient and commonly preferred. Specify the character encoding and use quotes handling, for example:
+
