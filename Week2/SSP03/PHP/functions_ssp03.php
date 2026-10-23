@@ -103,3 +103,18 @@ function fn_dayDetails(int $day_num): string {
         default: return 'No schedule';
     }
 }
+
+/**
+ * Return the time slot for a day number.
+ * Uses if/elseif with the OR (||) operator; weekend days share one time.
+ *
+ * @param int $day_num Day number 1-7.
+ * @return string Time slot, or "TBD" for invalid input.
+ */
+function fn_dayTime(int $day_num): string {
+    if ($day_num === 1 || $day_num === 3)     return '9:00 AM – 10:20 AM';
+    elseif ($day_num === 2 || $day_num === 4) return '1:00 PM – 2:50 PM';
+    elseif ($day_num === 5)                   return '10:00 AM – 11:00 AM';
+    elseif ($day_num === 6 || $day_num === 7) return 'Flexible';
+    else                                      return 'TBD';
+}
