@@ -1,0 +1,64 @@
+/* ============================================================
+   CS2623 Week 2 - week2.css
+   Author: Fraire, Fidel
+   Same colors as SSP02/CSS/table.css
+   Table header: #1B2A6B (navy)
+   Header text:  #FFFFFF (white)
+   Even rows:    #E8EEF4 (light blue)
+   Odd rows:     #FFFFFF (white)
+   Cell border:  #CCCCCC (light gray)
+   ============================================================ */
+
+main table {
+    background-color: #FFFFFF;
+    border-collapse: collapse;
+    font-family: Calibri, Tahoma, Arial, sans-serif;
+    margin: 1.5em auto;
+    width: 80%;
+}
+
+main th {
+    background-color: #1B2A6B;
+    color: #FFFFFF;
+    padding: 0.6em 1em;
+    text-align: left;
+}
+
+main td {
+    border: 1px solid #CCCCCC;
+    padding: 0.5em 1em;
+    vertical-align: top;
+}
+
+/* Alternating row color (set on the row, so the inline yellow
+   highlight on today's row in SSP03 still wins) */
+main tr:nth-child(even) {
+    background-color: #E8EEF4;
+}
+
+main h2 {
+    color: #006B7D;
+}
+
+/* ---------- SSP04 exercise buttons (same look as #top-nav) ---------- */
+.exercise-nav {
+    font-family: Tahoma, Verdana, Arial, sans-serif;
+    font-size: 0.85em;
+    margin: 1em 0;
+    text-align: center;
+}
+
+.exercise-nav a {
+    background-color: #006B7D;
+    border-radius: 4px;
+    display: inline-block;
+    margin: 0.2em;
+    padding: 0.5em 0.9em;
+    text-decoration: none;
+}
+
+.exercise-nav a:link,
+.exercise-nav a:visited,
+.exercise-nav a:active {
+    color: #FFFFFF;
+}
