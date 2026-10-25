@@ -14,7 +14,7 @@ declare(strict_types=1);
  * @return void
  */
 function fn_tableOpen(string $caption): void {
-    echo '<table border="1" cellpadding="6" cellspacing="0">';
+    echo '<table>'; // borders and padding come from week2.css (HTML5-valid)
     echo '<tr style="background-color:#1B2A6B;color:#FFFFFF;">';
     echo '  <th colspan="3">';
     echo htmlspecialchars($caption, ENT_QUOTES, 'UTF-8');
