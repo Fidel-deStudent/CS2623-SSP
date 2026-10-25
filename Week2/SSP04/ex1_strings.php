@@ -4,7 +4,7 @@ declare(strict_types=1);
 /*
  * ex1_strings.php - CS2623 SSP04 Exercise 1 (Ch09)
  * Demonstrates PHP string functions on a sample product description.
- * No form submission: every value is computed here and escaped on output.
+ * No form submission: every value is computed here.
  */
 
 /**
