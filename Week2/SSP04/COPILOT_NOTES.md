@@ -3,10 +3,8 @@
 
 | # | File | Copilot Suggestion | Decision | Notes |
 |---|------|--------------------|----------|-------|
-| 5 | ex1_strings.php | str_contains() usage | ACCEPTED | PHP 8 — Copilot used strpos() != false (old style) |
-| 6 | ex2_datetime.php | DateTime without timezone | REJECTED | Apollo runs UTC; must use DateTimeZone |
-| 7 | ex2_datetime.php | diff() for age calculation | ACCEPTED | Correct DateInterval pattern |
-| 8 | ex2_datetime.php | createFromFormat suggestion | IMPROVED | Added $tz parameter — Copilot omitted it |
+| 6 | ex1_strings.php | `str_contains($description, 'PHP')`, echoed directly | IMPROVED | str_contains() is the right PHP 8 check, but I converted the boolean to "true"/"false" and passed it through htmlspecialchars() like every other output. |
+| 7 | ex2_datetime.php | `createFromFormat('Y-m-d', '1999-05-14', $tz)` | IMPROVED | It included $tz, but echoed the date without escaping and kept the current time of day. I escaped the output and added `setTime(0, 0)` so the age math starts at midnight. |
 
 ## htmlspecialchars() vs htmlentities()
 htmlspecialchars() and htmlentities() both convert characters that have special meaning in HTML—such as &, <, >, and quotes—into HTML entities. This helps prevent HTML or script injection when displaying untrusted text.
@@ -14,5 +12,5 @@ htmlspecialchars() and htmlentities() both convert characters that have special 
 The difference is that htmlentities() also converts many other characters, including accented letters and symbols, while htmlspecialchars() converts only the HTML-special characters.
 
 
-For ordinary HTML output, htmlspecialchars() is usually sufficient and commonly preferred. Specify the character encoding and use quotes handling, for example:
+For ordinary HTML output, htmlspecialchars() is usually sufficient and commonly preferred. Specify the character encoding and use quotes handling.
 
