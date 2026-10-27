@@ -1,0 +1,142 @@
+/* ============================================================
+   CS2623 Week 3 - week3.css
+   Author: Fraire, Fidel
+   Same colors as SSP01/main.css and Week2/SSP03/CSS/week2.css
+   Headings / legends: #1B2A6B (navy)
+   Buttons:            #006B7D (teal)
+   Button text:        #FFFFFF (white)
+   Form background:    #FFFFFF (white)
+   Results background: #E8EEF4 (light blue)
+   Borders:            #CCCCCC (light gray)
+   Errors:             #CC0000 (red)
+   ============================================================ */
+
+main h2 {
+    color: #006B7D;
+}
+
+/* ---------- Forms (SSP05_1 and SSP05_2) ---------- */
+main form {
+    margin: 1em auto;
+    max-width: 40em;
+}
+
+main fieldset {
+    background-color: #FFFFFF;
+    border: 1px solid #CCCCCC;
+    margin: 0 0 1em;
+    padding: 0.5em 1em 1em;
+}
+
+main legend {
+    color: #1B2A6B;
+    font-weight: bold;
+    padding: 0 0.3em;
+}
+
+/* One label + input per row; wraps on narrow screens */
+.form-row {
+    align-items: flex-start;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0.6em 0;
+}
+
+.form-row > label,
+.form-row > .field-name {
+    flex-shrink: 0;
+    font-weight: bold;
+    width: 10em;
+}
+
+.form-row input[type="text"],
+.form-row input[type="email"],
+.form-row select,
+.form-row textarea {
+    font-family: inherit;
+    font-size: 1em;
+    max-width: 100%;
+    width: 16em;
+}
+
+/* Radio buttons and checkboxes, one per line */
+.choices label {
+    display: block;
+    margin-bottom: 0.2em;
+}
+
+main input[type="submit"] {
+    background-color: #006B7D;
+    border: none;
+    border-radius: 4px;
+    color: #FFFFFF;
+    cursor: pointer;
+    font-family: Tahoma, Verdana, Arial, sans-serif;
+    font-size: 0.95em;
+    padding: 0.5em 1.2em;
+}
+
+.error {
+    color: #CC0000;
+    font-weight: bold;
+    margin: 0.3em auto;
+    max-width: 40em;
+}
+
+/* ---------- Submitted data / order summary ---------- */
+main table {
+    background-color: #FFFFFF;
+    border-collapse: collapse;
+    margin: 1em auto 1.5em;
+    max-width: 40em;
+    width: 100%;
+}
+
+main th {
+    background-color: #1B2A6B;
+    color: #FFFFFF;
+    padding: 0.6em 1em;
+    text-align: left;
+}
+
+main td {
+    border: 1px solid #CCCCCC;
+    padding: 0.5em 1em;
+    vertical-align: top;
+}
+
+main tr:nth-child(even) {
+    background-color: #E8EEF4;
+}
+
+main td ul {
+    margin: 0;
+    padding-left: 1.2em;
+}
+
+.total td {
+    font-weight: bold;
+}
+
+/* ---------- SSP05 exercise buttons (same look as #top-nav) ---------- */
+.exercise-nav {
+    font-family: Tahoma, Verdana, Arial, sans-serif;
+    font-size: 0.85em;
+    margin: 1em 0;
+    text-align: center;
+}
+
+.exercise-nav a {
+    background-color: #006B7D;
+    border-radius: 4px;
+    display: inline-block;
+    margin: 0.2em;
+    padding: 0.5em 0.9em;
+    text-decoration: none;
+}
+
+.exercise-nav a:link,
+.exercise-nav a:visited,
+.exercise-nav a:active {
+    color: #FFFFFF;
+}

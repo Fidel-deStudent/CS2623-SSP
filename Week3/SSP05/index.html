@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<!-- CS2623 SSP05 - index.html - Author: Fraire, Fidel
+     Week 3 hub page. Pure HTML (no PHP): links to both Ch07 exercises. -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CS2623 SSP05: Fraire</title>
+
+    <!-- Shared site styles from SSP01, then the Week 3 styles -->
+    <link rel="stylesheet" href="../../SSP01/main.css">
+    <link rel="stylesheet" href="CSS/week3.css">
+</head>
+<body>
+<header>
+    <h1>CS2623 Server-Side Programming</h1>
+</header>
+
+<!-- Top navigation: same 12 buttons as the home page (SSP01) -->
+<nav id="top-nav">
+    <a href="../../SSP01/index.php">Home</a>
+    <a href="../../SSP02/SSP02.php">SSP02</a>
+    <a href="../../Week2/SSP03/index.php">SSP03</a>
+    <a href="../../Week2/SSP04/index.php">SSP04</a>
+    <a href="index.html">SSP05</a>
+    <a href="../../SSP06/SSP06.php">SSP06</a>
+    <a href="../../SSP07/SSP07.php">SSP07</a>
+    <a href="../../SSP08/SSP08.php">SSP08</a>
+    <a href="../../SSP09/SSP09.php">SSP09</a>
+    <a href="../../SSP10/SSP10.php">SSP10</a>
+    <a href="../../SSP11/SSP11.php">SSP11</a>
+    <a href="../../SSP12/SSP12.php">SSP12</a>
+</nav>
+
+<main>
+    <h2>CS-2623 Week 3 — SSP05</h2>
+
+    <p>Choose an exercise:</p>
+    <ul>
+        <li>Exercise 7-1 (Ch07): a personal info form with text, radio, select, and textarea fields.</li>
+        <li>Exercise 7-2 (Ch07): a product order form with a checkbox array, validation, and an order summary.</li>
+    </ul>
+
+    <!-- Buttons that open each exercise on its own page (same look as SSP04) -->
+    <nav class="exercise-nav">
+        <a href="SSP05_1/SSP05_1.php">Exercise 7-1: Personal Info Form</a>
+        <a href="SSP05_2/SSP05_2.php">Exercise 7-2: Product Order Form</a>
+    </nav>
+</main>
+
+<footer>
+    <!-- index.html must stay pure HTML (no PHP), so the browser fills in the
+         date from the file's Last-Modified header, in the same format as the
+         PHP footer on the other pages -->
+    <p>Last modified: <span id="last-modified">Unknown</span></p>
+    <script>
+        (function () {
+            var modified = new Date(document.lastModified);
+            if (isNaN(modified)) {
+                return;
+            }
+            var parts = {};
+            new Intl.DateTimeFormat('en-US', {
+                timeZone: 'America/Chicago',
+                month: 'long', day: 'numeric', year: 'numeric',
+                hour: 'numeric', minute: '2-digit', hour12: true
+            }).formatToParts(modified).forEach(function (p) {
+                parts[p.type] = p.value;
+            });
+            document.getElementById('last-modified').textContent =
+                parts.month + ' ' + parts.day + ', ' + parts.year + ', ' +
+                parts.hour + ':' + parts.minute + ' ' + parts.dayPeriod.toLowerCase();
+        })();
+    </script>
+    <p>Disclaimer: Oklahoma City Community College does not necessarily
+        endorse the content or the respective links of this web page.</p>
+</footer>
+</body>
+</html>
