@@ -1,0 +1,266 @@
+/* ============================================================
+   CS2623 Week 4 - week4.css (shared by SSP06 and SSP07)
+   Author: Fraire, Fidel
+   Same colors as SSP01/main.css and Week3/SSP05/CSS/week3.css
+   Headings / legends: #1B2A6B (navy)
+   Buttons:            #006B7D (teal)
+   Button text:        #FFFFFF (white)
+   Form background:    #FFFFFF (white)
+   Results background: #E8EEF4 (light blue)
+   Borders:            #CCCCCC (light gray)
+   Errors:             #CC0000 (red)
+   Success:            #1E7B34 (green)
+   ============================================================ */
+
+main {
+    padding: 0 1em;
+}
+
+main h2 {
+    color: #006B7D;
+    text-align: center;
+}
+
+main h3 {
+    color: #1B2A6B;
+}
+
+/* Logged-in user bar under the page header (SSP06) */
+.user-bar {
+    font-size: 0.9em;
+    margin-top: 0.4em;
+}
+
+.user-bar a:link,
+.user-bar a:visited {
+    color: #FFFFFF;
+}
+
+/* ---------- Forms ---------- */
+main form {
+    margin: 1em auto;
+    max-width: 40em;
+}
+
+main fieldset {
+    background-color: #FFFFFF;
+    border: 1px solid #CCCCCC;
+    margin: 0 0 1em;
+    padding: 0.5em 1em 1em;
+}
+
+main legend {
+    color: #1B2A6B;
+    font-weight: bold;
+    padding: 0 0.3em;
+}
+
+/* One label + input per row; wraps on narrow screens */
+.form-row {
+    align-items: flex-start;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0.6em 0;
+}
+
+.form-row > label,
+.form-row > .field-name {
+    flex-shrink: 0;
+    font-weight: bold;
+    width: 11em;
+}
+
+.form-row input[type="text"],
+.form-row input[type="password"],
+.form-row textarea {
+    font-family: inherit;
+    font-size: 1em;
+    max-width: 100%;
+    width: 16em;
+}
+
+.hint {
+    color: #555555;
+    font-size: 0.85em;
+    margin: 0.2em 0 0 11em;
+}
+
+main button {
+    background-color: #006B7D;
+    border: none;
+    border-radius: 4px;
+    color: #FFFFFF;
+    cursor: pointer;
+    font-family: Tahoma, Verdana, Arial, sans-serif;
+    font-size: 0.95em;
+    margin: 0.2em 0.2em 0.2em 0;
+    padding: 0.5em 1.2em;
+}
+
+main button:disabled {
+    background-color: #999999;
+    cursor: not-allowed;
+}
+
+/* Small buttons inside table rows (Remove one) */
+main button.small {
+    font-size: 0.8em;
+    padding: 0.3em 0.7em;
+}
+
+/* Forms that sit inline in a table cell or product card */
+main form.inline {
+    display: inline;
+    margin: 0;
+}
+
+/* ---------- Messages ---------- */
+.error,
+.success,
+.info {
+    margin: 0.6em auto;
+    max-width: 40em;
+}
+
+.error {
+    color: #CC0000;
+    font-weight: bold;
+}
+
+.error ul {
+    margin: 0.3em 0 0;
+}
+
+.success {
+    color: #1E7B34;
+    font-weight: bold;
+}
+
+.info {
+    background-color: #E8EEF4;
+    border: 1px solid #CCCCCC;
+    padding: 0.5em 1em;
+}
+
+/* Demo accounts table on the SSP06_21_2 login page */
+.info table.demo-accounts {
+    margin: 0.5em 0;
+}
+
+/* ---------- Tables ---------- */
+main table {
+    background-color: #FFFFFF;
+    border-collapse: collapse;
+    margin: 1em auto 1.5em;
+    max-width: 40em;
+    width: 100%;
+}
+
+main th {
+    background-color: #1B2A6B;
+    color: #FFFFFF;
+    padding: 0.6em 1em;
+    text-align: left;
+}
+
+main td {
+    border: 1px solid #CCCCCC;
+    padding: 0.5em 1em;
+    vertical-align: top;
+}
+
+main tr:nth-child(even) {
+    background-color: #E8EEF4;
+}
+
+main td.money,
+main th.money {
+    text-align: right;
+}
+
+.total td {
+    font-weight: bold;
+}
+
+/* ---------- Lists (SSP07_11_1) ---------- */
+.list-columns {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+    justify-content: center;
+    margin: 1em auto;
+    max-width: 60em;
+}
+
+.list-box {
+    background-color: #FFFFFF;
+    border: 1px solid #CCCCCC;
+    flex: 1 1 12em;
+    padding: 0 1em 0.5em;
+}
+
+.list-box h3 {
+    font-size: 1em;
+}
+
+/* ---------- Product cards (SSP06_23_1) ---------- */
+.products {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+    justify-content: center;
+    margin: 1em auto;
+    max-width: 60em;
+}
+
+.product {
+    background-color: #FFFFFF;
+    border: 1px solid #CCCCCC;
+    border-radius: 4px;
+    flex: 0 1 12em;
+    padding: 0.5em 1em 1em;
+    text-align: center;
+}
+
+.product h3 {
+    font-size: 1.05em;
+    margin: 0.5em 0;
+}
+
+.product .price {
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+.center {
+    text-align: center;
+}
+
+/* ---------- Exercise buttons (same look as #top-nav) ---------- */
+.exercise-nav {
+    font-family: Tahoma, Verdana, Arial, sans-serif;
+    font-size: 0.85em;
+    margin: 1em 0;
+    text-align: center;
+}
+
+.exercise-nav a {
+    background-color: #006B7D;
+    border-radius: 4px;
+    display: inline-block;
+    margin: 0.2em;
+    padding: 0.5em 0.9em;
+    text-decoration: none;
+}
+
+.exercise-nav a:link,
+.exercise-nav a:visited,
+.exercise-nav a:active {
+    color: #FFFFFF;
+}
+
+/* Secondary links under the exercise buttons (Dashboard | Profile | Log out) */
+.sub-nav {
+    margin: 0.5em 0 1em;
+    text-align: center;
+}
