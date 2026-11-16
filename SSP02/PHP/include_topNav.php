@@ -8,8 +8,8 @@
     <a href="../Week3/SSP05/index.html">SSP05</a>
     <a href="../Week4/SSP06/index.html">SSP06</a>
     <a href="../Week4/SSP07/index.html">SSP07</a>
-    <a href="../SSP08/SSP08.php">SSP08</a>
-    <a href="../SSP09/SSP09.php">SSP09</a>
+    <a href="../Week5/SSP08/index.html">SSP08</a>
+    <a href="../Week5/SSP09/index.html">SSP09</a>
     <a href="../SSP10/SSP10.php">SSP10</a>
     <a href="../SSP11/SSP11.php">SSP11</a>
     <a href="../SSP12/SSP12.php">SSP12</a>
